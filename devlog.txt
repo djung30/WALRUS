@@ -73,7 +73,7 @@ Daniel :: Finalzied propro
 
 2022-01-18
 --------------------------------------------------------------
-Daniel :: 
-Ethan :: 
-Joshua ::
+Daniel :: Worked on v0 and created UMLs for Board and Gameplay
+Ethan :: Worked on v0 and created UMLs for Board and Gameplay
+
 ==============================================================
