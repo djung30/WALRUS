@@ -1,22 +1,25 @@
+import java.util.Scanner;
+
 public class Woo {
-	
-	public Woo() {
-		int [][] m1 = new int[4][4];
-	}
-	
-	public static void print1( int[][] a ){
-		for(int i = 0; i < a.length; i++){
-			for(int j = 0; j < a[i].length; j++){
-        			System.out.print(" ");
-        			System.out.print(a[i][j]);
-      			}
-      		System.out.println();
-    		}
-    	System.out.println();
-  	}
-	
+
+	private static final String acceptedInputs = "wasdWASD";
+
 	public static void main(String[] args) {
-		int [][] m1 = new int[4][4];
-		print1(m1);
+		int [][] grid = new int[4][4];
+		Board game = new Board();
+		game.populateBoard(grid);
+		String s;
+    String name = "";
+    s = "~~~ 2048 : TERMINAL EDITION ~~~\n";
+    s += "\n How To Play: \n";
+    s += "\n Use your WASD to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048! \n";
+		s += "\n \n";
+    System.out.print( s );
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter your MOVE:");
+		String move = input.nextLine();
+		if (acceptedInputs.indexOf(move) == -1) {
+			System.out.print("Your input is invalid, please enter your MOVE again, and make sure to use the WASD keys:");
+		}
 	}
 }
