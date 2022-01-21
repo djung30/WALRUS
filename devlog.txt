@@ -63,4 +63,9 @@ Ethan :: Worked on v0 and created UMLs for Board and Gameplay
 Daniel :: Developed methods to initialize a grid + shift the blocks by user input. Also worked on implementing Scanner for input. 
 Ethan :: Developed methods to initialize a grid + shift the blocks by user input. Also worked on implementing Scanner for input. 
 
+2022-01-20
+--------------------------------------------------------------
+Daniel :: Developed methods to detect the number of possible moves and made significant progress in finishing the implementation of Scanner.
+Ethan :: Developed methods to detect the number of possible moves and made significant progress in finishing the implementation of Scanner.
+
 ==============================================================
