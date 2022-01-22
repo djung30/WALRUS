@@ -1,11 +1,7 @@
 public class Board {
-	public static int[] storedRow0;
-	public static int[] storedRow1;
-	public static int[] storedRow2;
-	public static int[] storedRow3;
 	public static boolean moved;
-	public static boolean gameOver; 
-	public static int possibleMoves = 0; 
+	public static boolean gameOver;
+	public static int possibleMoves = 0;
 
 	public Board(){
 		int [][] grid = new int[4][4];
@@ -14,35 +10,6 @@ public class Board {
 	public static void populateBoard(int[][] a){
 		a [(int) (Math.random()*3)][(int) (Math.random()*3)] = 2;
 	}
-/*
-	public static void storeArray(int[][] a){
-		storedRow0 = a[0];
-		storedRow1 = a[1];
-		storedRow2 = a[2];
-		storedRow3 = a[3];
-	}
-
-	public static void hasMoved(int[][] a){
-		int counter = 0;
-			if(a[0].equals(storedRow0)){
-				counter++;
-			}
-			if(a[1].equals(storedRow1)){
-				counter++;
-			}
-			if(a[2].equals(storedRow2)){
-				counter++;
-			}
-			if(a[3].equals(storedRow3)){
-				counter++;
-			}
-		if(counter == 4){
-			moved = false;
-		} else {
-			moved = true;
-		}
-	}
-*/
 
 	public static void randomTwo(int[][] a) {
 		boolean isZero = false;
@@ -60,26 +27,26 @@ public class Board {
 
 
 	public static void noPossibleMoves( int[][] a ) {
-		possibleMoves = 0; 
+		possibleMoves = 0;
 		for(int i = 0; i < 4; i++){
   			for(int j = 0; j < 3; j++){
         			if ((a[i][j+1] == a[i][j]) || (a[i][j] == 0)) {
-        				possibleMoves++; 
+        				possibleMoves++;
       				}
-      		
+
     			}
     		}
-    		
-    		for(int i = 0; i < 3; i++){
-  			for(int j = 0; j < 4; j++){ 
+
+    	for(int i = 0; i < 3; i++){
+  			for(int j = 0; j < 4; j++){
   				if ((a[i+1][j] == a[i][j]) || (a[i][j] == 0)) {
   					possibleMoves++;
   				}
-  			} 
-  			
+  			}
+
   		}
   		if (possibleMoves < 1) {
-  		gameOver = true; 
+  		gameOver = true;
   		}
 	}
 /*
@@ -197,22 +164,22 @@ public class Board {
 		grid[0][1] = 4;
 		grid[0][2] = 2;
 		grid[0][3] = 4;
-		
+
 		grid[1][0] = 4;
 		grid[1][1] = 2;
 		grid[1][2] = 4;
 		grid[1][3] = 2;
-		
+
 		grid[2][0] = 2;
 		grid[2][1] = 4;
 		grid[2][2] = 2;
 		grid[2][3] = 4;
-		
+
 		grid[3][0] = 4;
 		grid[3][1] = 2;
 		grid[3][2] = 4;
 		grid[3][3] = 2;
-		
+
 		print1(grid);
 		shiftRight(grid);
 		print1(grid);
