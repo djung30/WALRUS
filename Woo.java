@@ -2,14 +2,10 @@ import java.util.Scanner;
 
 public class Woo {
 	private static final String acceptedInputs = "wasdWASD";
-	public static boolean moved;
-	public static boolean gameOver = false; 
-	public static int possibleMoves = 0; 
-	
+
 	public static void main(String[] args) {
-		int [][] grid = new int[4][4];
 		Board game = new Board();
-		game.populateBoard(grid);
+		game.newTile();
 		String s;
 		String name = "";
     		s = "~~~ 2048 : TERMINAL EDITION ~~~\n";
@@ -17,16 +13,16 @@ public class Woo {
     		s += "\n Use your WASD keys and the enter key to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048! \n";
 		s += "\n \n";
     		System.out.print( s );
-    		Board.print1(grid);
-    		while (gameOver != true){
-    			moveDoer(inputGet(), grid);
-    			Board.randomTwo(grid);
-    			Board.print1(grid);
-    			Board.noPossibleMoves(grid);
-    			System.out.print( possibleMoves );
+        begInputGet();
+        game.printGrid();
+    		while (! game.isEnded()){
+    			if(moverDoer(inputGet(), game)){
+    				game.newTile(); //We only want to generate a new tile if the user made a valid move.
+					}
+    			game.printGrid();
     		}
 	}
-	
+
 	public static String inputGet() {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter your MOVE:");
@@ -36,22 +32,31 @@ public class Woo {
 			System.out.print("Your input is invalid, please enter your MOVE again, and make sure to use the WASD keys:");
 			move = input.nextLine();
 		}
-		return move; 
+		return move;
 	}
-	
-	public static void moveDoer(String input, int[][] a){
+
+  public static String begInputGet() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter any key to begin:");
+		String move = input.nextLine();
+		return move;
+	}
+
+	public static boolean moverDoer(String input, Board game){
 		if(input.equals("w") || input.equals("W")){
-			Board.shiftUp(a);
+			return game.shiftUp();
 		}
 		if(input.equals("a") || input.equals("A")){
-			Board.shiftLeft(a);
+			return game.shiftLeft();
 		}
 		if(input.equals("s") || input.equals("S")){
-			Board.shiftDown(a);
+			return game.shiftDown();
 		}
 		if(input.equals("d") || input.equals("D")){
-			Board.shiftRight(a);
+			return game.shiftRight();
 		}
-
+		else{
+			return false; //Shouldn't happen
+		}
 	}
 }
