@@ -13,7 +13,8 @@ public class Woo {
     		s += "\n Use your WASD keys and the enter key to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048! \n";
 		s += "\n \n";
     		System.out.print( s );
-    		game.printGrid();
+        begInputGet();
+        game.printGrid();
     		while (! game.isEnded()){
     			if(moverDoer(inputGet(), game)){
     				game.newTile(); //We only want to generate a new tile if the user made a valid move.
@@ -31,6 +32,13 @@ public class Woo {
 			System.out.print("Your input is invalid, please enter your MOVE again, and make sure to use the WASD keys:");
 			move = input.nextLine();
 		}
+		return move;
+	}
+
+  public static String begInputGet() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter any key to begin:");
+		String move = input.nextLine();
 		return move;
 	}
 
