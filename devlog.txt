@@ -13,19 +13,19 @@ Our final project will be a terminal recreation of the iconic game 2048, which w
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - The implementation of the ANSI control codes was a large challenge to overcome, as we had not covered them in class. And although the implementation of the terminal art could be MUCH more efficient, it still works! 
+- A lot of revisiting of past code / assignments as refreshers 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+- ANSI control codes from Terminally Ill (we understand why the file is named that way) 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,5 +67,17 @@ Ethan :: Developed methods to initialize a grid + shift the blocks by user input
 --------------------------------------------------------------
 Daniel :: Developed methods to detect the number of possible moves and made significant progress in finishing the implementation of Scanner.
 Ethan :: Developed methods to detect the number of possible moves and made significant progress in finishing the implementation of Scanner.
+
+2022-01-22
+--------------------------------------------------------------
+Daniel :: Worked on singificant refactoring / rethinking of certin methods in Board in order to maximize efficiency. 
+Ethan :: Worked on singificant refactoring / rethinking of certin methods in Board in order to maximize efficiency. 
+Joshua :: Worked on singificant refactoring / rethinking of certin methods in Board in order to maximize efficiency. 
+
+2022-01-23
+--------------------------------------------------------------
+Daniel :: Implemented the terminal representation of the board, put finishing touches on the project, and checked for bugs. 
+Ethan :: Implemented the terminal representation of the board, put finishing touches on the project, and checked for bugs. 
+Joshua :: Implemented the terminal representation of the board, put finishing touches on the project, and checked for bugs. 
 
 ==============================================================
