@@ -35,10 +35,19 @@ public class Board {
 		}
 		int pos = spots.get((int) (Math.random()*spots.size()));
 		grid[pos / 4][pos % 4] = 2;
+		//grid[0][0]=2048;
 	}
 
 
 	public boolean isEnded() {
+		for(int i = 0; i < 4; i++){
+  		for(int j = 0; j < 4; j++){
+				if (grid[i][j] == 2048){
+					System.out.println("Congrats! You got to 2048!");
+					return true;
+				}
+			}
+		}
 		//Checks to see if there are any zeros in the grid, meaning that there are possible moves
 		for(int i = 0; i < 4; i++){
   		for(int j = 0; j < 4; j++){
@@ -63,6 +72,7 @@ public class Board {
 				}
 			}
 		}
+		System.out.println("Too bad! There are no possible moves left.");
 		return true;
 	}
 
@@ -324,7 +334,6 @@ public class Board {
 		String after = strArr(grid);
 		return ! after.equals(before);
 	}
-
 	//Tests
 	public static void main(String[] args) {
 		Board b = new Board();
