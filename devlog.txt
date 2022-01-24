@@ -12,7 +12,7 @@ Our final project will be a terminal recreation of the iconic game 2048, which w
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+- The implementation of the ANSI control codes was a large challenge to overcome, as we had not covered them in class. And although the implementation of the terminal art could be MUCH more efficient, it still works! 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
